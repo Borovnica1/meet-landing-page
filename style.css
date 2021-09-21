@@ -36,3 +36,30 @@ h2 {
   letter-spacing: 4px;
   text-transform: capitalize;
 }
+
+.btn {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+  padding: 1rem  2rem;
+  border-radius: 25px 25px;
+  border: none;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: .002s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-light);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color-light);
+}
