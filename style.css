@@ -18,6 +18,8 @@ body {
   font-family: 'Red Hat Display', sans-serif;
   color: rgb(var(--gray-color));
   font-size: 26px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 h1 {
