@@ -5,34 +5,34 @@
 }
 
 :root {
-  --primary-color: rgb(77, 150, 168);
-  --primary-color-light: rgb(143, 227, 249);
-  --secondary-color: rgb(133, 95, 177);
-  --secondary-color-light: rgb(217, 184, 255);
-  --font-color: rgb(40, 40, 61);
-  --gray-color: rgb(135, 135, 157);
-  --white-color: rgb(250, 250, 250);
+  --primary-color: 77, 150, 168;
+  --primary-color-light: 143, 227, 249;
+  --secondary-color: 133, 95, 177;
+  --secondary-color-light: 217, 184, 255;
+  --font-color: 40, 40, 61;
+  --gray-color: 135, 135, 157;
+  --white-color: 250, 250, 250;
 }
 
 body {
   font-family: 'Red Hat Display', sans-serif;
-  color: var(--gray-color);
+  color: rgb(var(--gray-color));
   font-size: 26px;
 }
 
 h1 {
-  color: var(--font-color);
+  color: rgb(var(--font-color));
   font-size: 64px;
 }
 
 h2 {
-  color: var(--font-color);
+  color: rgb(var(--font-color));
   font-size: 44px;
 }
 
 .overline {
   display: block;
-  color: var(--primary-color);
+  color: rgb(var(--primary-color));
   font-size: 26px;
   letter-spacing: 4px;
   text-transform: capitalize;
@@ -45,29 +45,30 @@ h2 {
 .btn {
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 700;
-  padding: 1rem  2rem;
-  border-radius: 25px 25px;
+  padding: 1.2rem  3rem;
+  border-radius: 100px 100px;
   border: none;
-  color: var(--white-color);
+  color: rgb(var(--white-color));
   cursor: pointer;
   transition: .002s;
   margin: 5px;
+  white-space: nowrap;
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background-color: rgb(var(--primary-color));
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-color-light);
+  background-color: rgb(var(--primary-color-light));
 }
 
 .btn-secondary {
-  background-color: var(--secondary-color);
+  background-color: rgb(var(--secondary-color));
 }
 
 .btn-secondary:hover {
-  background-color: var(--secondary-color-light);
+  background-color: rgb(var(--secondary-color-light));
 }
 
 header {
@@ -146,6 +147,10 @@ main {
   margin: 100px 0;
 }
 
+.stylish-vertical-line--second {
+  margin: 100px 0 0 0;
+}
+
 .stylish-vertical-line__line {
   height: 100%;
   position: absolute;
@@ -171,18 +176,18 @@ main {
   left: 50%;
   transform: translate(-50%, 50%);
   z-index: 5;
-  background-color: var(--white-color);
+  background-color: rgb(var(--white-color));
 }
 
 .stylish-vertical-line__number span {
   font-size: 15px;
   font-weight: 700;
-  color: var(--gray-color);
+  color: rgb(var(--gray-color));
 }
 
 
 .middle-section {
-  margin: 0 40px;
+  margin: 0 40px 40px 40px;
 }
 
 .middle-section__small-gallery {
@@ -211,6 +216,23 @@ main {
   margin-top: 30px;
 }
 
+footer {
+  height: 350px;
+  background:linear-gradient(0deg, rgba(var(--primary-color), 0.85), rgba(var(--primary-color), 0.85)), url(assets/desktop/image-footer.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 80px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p, 
+footer h1 {
+  color: rgb(var(--white-color));
+}
+
 @media (max-width: 1050px) {
   body { 
     font-size: 22px;
@@ -226,6 +248,16 @@ main {
 
   .stylish-vertical-line {
     margin: 70px 0;
+  }
+
+  .stylish-vertical-line--second {
+    margin: 70px 0 0 0;
+  }
+
+  footer {
+    height: 350px;
+    padding: 50px;
+    gap: 15px;
   }
 }
 
@@ -250,7 +282,7 @@ main {
   }
 
   .intro-section__article  {
-    margin: 0 20%;
+    margin: 0 15%;
     transform: translateY(-50px);
   }
 
@@ -258,8 +290,12 @@ main {
     margin: 30px 0 70px 0;
   }
 
+  .stylish-vertical-line--second {
+    margin: 30px 0 0 0;
+  }
+
   .middle-section {
-    margin: 0 20px;
+    margin: 0 20px 40px 20px;
   }
   
   .middle-section__small-gallery {
@@ -269,6 +305,18 @@ main {
   .middle-section__article {
     width: 450px;
     margin: 60px auto 0 auto;
+  }
+
+  footer {
+    flex-direction: column;
+    height: 400px;
+    padding: 30px;
+    gap: 0px;
+    justify-content: space-around;
+  }
+
+  footer * {
+    text-align: center;
   }
 }
 
@@ -280,6 +328,10 @@ main {
 
   .stylish-vertical-line {
     margin: 15px 0 70px 0;
+  }
+
+  .stylish-vertical-line--second {
+    margin: 15px 0 0 0;
   }
   
   .middle-section__article {
@@ -332,6 +384,9 @@ main {
     row-gap: 20px;
   }
 
+  footer {
+    height: 500px;
+  }
 
 }
 
