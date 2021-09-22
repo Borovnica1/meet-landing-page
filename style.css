@@ -139,6 +139,48 @@ main {
   transform: translateY(50px);
 }
 
+.stylish-vertical-line {
+  position: relative;
+  height: 150px;
+  margin: 100px 0;
+}
+
+.stylish-vertical-line__line {
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 1px;
+  border: 1px solid rgba(135, 135, 157, 0.3);
+  opacity: .4;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.stylish-vertical-line__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(135, 135, 157, 0.3);
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 5;
+  background-color: var(--white-color);
+}
+
+.stylish-vertical-line__number span {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-color);
+}
+
+
+
 
 @media (max-width: 1050px) {
   body { 
